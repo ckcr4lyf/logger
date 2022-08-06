@@ -2,7 +2,23 @@
   "name": "@ckcr4lyf/logger",
   "version": "0.0.1",
   "description": "Personalized logging package",
-  "main": "index.js",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js",
+      "types": "./lib/index.d.ts"
+    }
+  },
+  "homepage": "https://github.com/ckcr4lyf/logger",
+  "bugs": {
+    "url": "https://github.com/ckcr4lyf/logger/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ckcr4lyf/logger.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
