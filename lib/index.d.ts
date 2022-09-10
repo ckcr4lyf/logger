@@ -4,13 +4,14 @@ export const LOGLEVEL: Record<'DEBUG' | 'INFO' | 'WARN' | 'ERROR', LOGLEVEL>;
 
 export type LoggerOptions = {
     loglevel: LOGLEVEL,
+    filename?: string,
 }
 
 export class Logger {
 
     loglevel: LOGLEVEL;
 
-    constructor(loglevel: LOGLEVEL);
+    constructor(options: LoggerOptions);
 
     debug(message: string): undefined;
 
