@@ -2,9 +2,12 @@ type LOGLEVEL = -1 | 0 | 1 | 2 | 3;
 
 export const LOGLEVEL: Record<'TRACE' | 'DEBUG' | 'INFO' | 'WARN' | 'ERROR', LOGLEVEL>;
 
+export type LogFormat = 'simple' | 'json';
+
 export type LoggerOptions = {
     loglevel: LOGLEVEL,
     filename?: string,
+    format?: LogFormat,
 }
 
 export class Logger {
@@ -23,3 +26,5 @@ export class Logger {
 
     error(message: string): undefined;
 }
+
+export function getLogger(options?: Partial<LoggerOptions>): Logger;
